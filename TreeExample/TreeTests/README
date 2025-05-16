@@ -1,4 +1,4 @@
 Erstelle eine Baumstruktur, die ein einfaches Dateisystem simuliert, mit Ordnern und Dateien. Implementiere Methoden, um:
-	1.	Den Baum rekursiv auszugeben (wie ein Dateibrowser),
-	2.	Eine Datei nach Name zu suchen,
-	3.	Die Größe aller Dateien im Baum zu berechnen.
+1.	Den Baum rekursiv auszugeben (wie ein Dateibrowser),
+2.	Eine Datei nach Name zu suchen,
+3.	Die Größe aller Dateien im Baum zu berechnen.
