@@ -6,5 +6,6 @@ public class FileNode : FileSystemNode
 
     public FileNode(string name, int size) : base(name)
     {
+        Size = size;
     }
 }

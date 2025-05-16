@@ -31,11 +31,6 @@ public class Tests
 
     private int CalculateTotalSize(FileSystemNode node)
     {
-        return node switch
-        {
-            FileNode f => f.Size,
-            DirectoryNode d => d.Children.Sum(CalculateTotalSize),
-            _ => 0
-        };
+        return 0;
     }
 }
