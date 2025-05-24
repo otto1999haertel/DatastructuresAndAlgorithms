@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+
 namespace TreeLib;
 
 public class DirectoryNode : FileSystemNode
@@ -72,8 +74,20 @@ public class DirectoryNode : FileSystemNode
             {
                 return FindFile(dir, fileName);
             }
-            
+
         }
         return null;
+    }
+
+    public List<string> PreOderTraversing(DirectoryNode directory)
+    {
+        List<string> result = new List<string>();
+        return result;
+    }
+
+    public List<string> PostOderTraversing(DirectoryNode directory)
+    {
+        List<string> result = new List<string>();
+        return result;
     }
 }

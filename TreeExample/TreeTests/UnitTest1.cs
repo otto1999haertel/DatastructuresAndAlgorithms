@@ -46,13 +46,35 @@ public class Tests
     [Test]
     public void PreOderTaversal()
     {
-        Assert.That(false.Equals(true));
+        var root = SetUpDirectory();
+        List<string> result = root.PreOderTraversing(root);
+        List<string> expected = new List<string>
+        {
+            "root",
+            "docs",
+            "a.txt",
+            "b.txt",
+            "src",
+            "main.cs(10)"
+        };
+        Assert.That(result.SequenceEqual(expected),Is.True, "The pre-order traversal result does not match the expected output.");
     }
 
     [Test]
     public void PostOderTaversal()
     {
-        Assert.That(false.Equals(true));
+        var root = SetUpDirectory();
+        List<string> result = root.PreOderTraversing(root);
+        List<string> expected = new List<string>
+        {
+            "a.txt",
+            "b.txt",
+            "docs",
+            "main.cs(10)",
+            "src",
+            "root",
+        };
+        Assert.That(result.SequenceEqual(expected),Is.True, "The post-order traversal result does not match the expected output.");
     }
 
     private DirectoryNode SetUpDirectory()
