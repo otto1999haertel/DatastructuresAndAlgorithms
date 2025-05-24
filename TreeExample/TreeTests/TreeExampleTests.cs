@@ -64,7 +64,7 @@ public class Tests
     public void PostOderTaversal()
     {
         var root = SetUpDirectory();
-        List<string> result = root.PreOderTraversing(root);
+        List<string> result = root.PostOderTraversing(root);
         List<string> expected = new List<string>
         {
             "a.txt",
