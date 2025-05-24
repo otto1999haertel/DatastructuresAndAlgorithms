@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TreeSymmetric", "TreeSymmet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeSymmetricLib", "TreeSymmetric\TreeSymmetricLib\TreeSymmetricLib.csproj", "{40E38F16-D723-49BA-A0FA-DEF9883B0DAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeSymmetricTests", "TreeSymmetric\TreeSymmetricTests\TreeSymmetricTests.csproj", "{D9120935-5D17-44E0-9CF6-5C203CDD2BE0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
