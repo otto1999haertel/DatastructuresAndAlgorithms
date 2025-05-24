@@ -47,7 +47,8 @@ public class TreeExampleTests
     public void PreOderTaversal()
     {
         var root = SetUpDirectory();
-        List<string> result = root.PreOderTraversing(root);
+        List<string> result = new List<string>();
+        root.PreOderTraversing(root, result);
         List<string> expected = new List<string>
         {
             "root",
@@ -55,7 +56,7 @@ public class TreeExampleTests
             "a.txt",
             "b.txt",
             "src",
-            "main.cs(10)"
+            "main.cs"
         };
         Assert.That(result.SequenceEqual(expected),Is.True, "The pre-order traversal result does not match the expected output.");
     }

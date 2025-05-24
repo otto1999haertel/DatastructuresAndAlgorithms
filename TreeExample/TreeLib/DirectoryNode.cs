@@ -79,10 +79,26 @@ public class DirectoryNode : FileSystemNode
         return null;
     }
 
-    public List<string> PreOderTraversing(DirectoryNode directory)
+    public List<string> PreOderTraversing(DirectoryNode directory, List<string> result)
     {
-        List<string> result = new List<string>();
         //Idee: Wurzel -> Kinder - beginnend bei dem, welches zu erst hinzugefügt wurde
+        result.Add(directory.Name);
+        foreach (var child in directory.Children)
+        {
+
+            switch (child)
+            {
+                case FileNode fileNode:
+                    result.Add(fileNode.Name);
+                    break;
+
+                case DirectoryNode subDir:
+                    //Mitgabe des an die Funktion
+                    //result.Add(subDir.Name);
+                    PreOderTraversing(subDir, result);
+                    break;
+            }
+        }
         return result;
     }
 
