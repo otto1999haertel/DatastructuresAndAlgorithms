@@ -102,10 +102,25 @@ public class DirectoryNode : FileSystemNode
         return result;
     }
 
-    public List<string> PostOderTraversing(DirectoryNode directory)
+    public List<string> PostOderTraversing(DirectoryNode directory, List<string> result)
     {
-        List<string> result = new List<string>();
         //Idee: Kinder -> Wurzel - beginnend bei dem, welches zu erst hinzugefügt wurde
+        foreach (var child in directory.Children)
+        {
+            switch (child)
+            {
+                case FileNode fileNode:
+                    result.Add(fileNode.Name);
+                    break;
+
+                case DirectoryNode subDir:
+                    //Mitgabe des an die Funktion
+                    //result.Add(subDir.Name);
+                    PostOderTraversing(subDir, result);
+                    break;
+            }
+        }
+        result.Add(directory.Name);
         return result;
     }
 }

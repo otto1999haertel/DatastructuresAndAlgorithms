@@ -65,13 +65,14 @@ public class TreeExampleTests
     public void PostOderTaversal()
     {
         var root = SetUpDirectory();
-        List<string> result = root.PostOderTraversing(root);
+        List<string> result = new List<string>();
+        root.PostOderTraversing(root,result);
         List<string> expected = new List<string>
         {
             "a.txt",
             "b.txt",
             "docs",
-            "main.cs(10)",
+            "main.cs",
             "src",
             "root",
         };
