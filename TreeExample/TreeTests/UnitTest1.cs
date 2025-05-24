@@ -43,6 +43,18 @@ public class Tests
         Assert.That(foundNode, Is.Not.Null);
     }
 
+    [Test]
+    public void PreOderTaversal()
+    {
+        Assert.That(false.Equals(true));
+    }
+
+    [Test]
+    public void PostOderTaversal()
+    {
+        Assert.That(false.Equals(true));
+    }
+
     private DirectoryNode SetUpDirectory()
     {
         // Arrange
