@@ -82,12 +82,14 @@ public class DirectoryNode : FileSystemNode
     public List<string> PreOderTraversing(DirectoryNode directory)
     {
         List<string> result = new List<string>();
+        //Idee: Wurzel -> Kinder - beginnend bei dem, welches zu erst hinzugefügt wurde
         return result;
     }
 
     public List<string> PostOderTraversing(DirectoryNode directory)
     {
         List<string> result = new List<string>();
+        //Idee: Kinder -> Wurzel - beginnend bei dem, welches zu erst hinzugefügt wurde
         return result;
     }
 }
