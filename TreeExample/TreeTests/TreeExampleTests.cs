@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.Design.Serialization;
 using TreeLib;
-namespace TreeTests;
+namespace TreeExampleTests;
 
-public class Tests
+public class TreeExampleTests
 {
     [SetUp]
     public void Setup()
