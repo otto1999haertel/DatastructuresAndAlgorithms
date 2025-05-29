@@ -15,7 +15,8 @@ public class TreeNode
 
     public bool IsSymmetric(TreeNode startNode)
     {
-        //Idee: Tree Traversal => Compare left and right subtrees for child nodes
+        //Idee: Tree Traversal => Compare left and right subtrees for left and rights child nodes
+        //Tree lineraisieren => Beide liniearisierten bäume müssen entgegengesetzte left and right child nodes haben
         return false;
     }
 }
