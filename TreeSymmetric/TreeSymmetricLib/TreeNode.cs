@@ -15,6 +15,7 @@ public class TreeNode
 
     public bool IsSymmetric(TreeNode startNode)
     {
+        //Idee: Tree Traversal => Compare left and right subtrees for child nodes
         return false;
     }
 }
