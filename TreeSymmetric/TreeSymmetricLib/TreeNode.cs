@@ -13,7 +13,7 @@ public class TreeNode
         this.right = right;
     }
 
-    public bool IsSymmetric(TreeNode startNode)
+    public bool IsSymmetric(TreeNode leftNode, TreeNode rightNode)
     {
         //Idee: Zwei knoten gleichzeitig vergleichen 
         return false;
