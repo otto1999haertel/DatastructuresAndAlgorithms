@@ -20,9 +20,9 @@ public class TreeNode
         {
             if (leftNode.val == rightNode.val)
             {
-                if (leftNode.left != null && rightNode.right != null)
+                if (leftNode.left != null && rightNode.right != null &&(leftNode.right != null && rightNode.left != null))
                 {
-                    return IsSymmetric(leftNode.left, rightNode.right);
+                    return IsSymmetric(leftNode.left, rightNode.right) && IsSymmetric(leftNode.right, rightNode.left);
                 }
                 if (leftNode.left == null && rightNode.right == null)
                 {
