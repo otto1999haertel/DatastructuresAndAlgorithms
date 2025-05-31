@@ -17,7 +17,7 @@ public class TreeSymmetricTest
             new TreeNode(2, new TreeNode(4), new TreeNode(3))
         );
 
-        var result = tree.IsSymmetric(tree);
+        var result = tree.IsSymmetric(tree.left, tree.right);
         Assert.That(result.Equals(true));
     }
 
@@ -29,7 +29,7 @@ public class TreeSymmetricTest
             new TreeNode(2, null, new TreeNode(3))
         );
 
-        var result = tree.IsSymmetric(tree);
+        var result = tree.IsSymmetric(tree.left, tree.right);
         Assert.That(result.Equals(false));
     }
 
@@ -38,7 +38,7 @@ public class TreeSymmetricTest
     {
         TreeNode? tree = null;
 
-        var result = tree.IsSymmetric(tree);
+        var result = tree.IsSymmetric(tree, tree);
         Assert.That(result.Equals(null));
     }
 
@@ -47,7 +47,7 @@ public class TreeSymmetricTest
     {
         var tree = new TreeNode(1);
 
-        var result = tree.IsSymmetric(tree);
+        var result = tree.IsSymmetric(tree.left, tree.right);
         Assert.That(result.Equals(true));
     }
 }
