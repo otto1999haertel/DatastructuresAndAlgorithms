@@ -20,7 +20,7 @@ public class TreeNode
         {
             if (leftNode.val == rightNode.val)
             {
-                if (leftNode.left != null && rightNode.right != null &&(leftNode.right != null && rightNode.left != null))
+                if (leftNode.left != null && rightNode.right != null && (leftNode.right != null && rightNode.left != null))
                 {
                     return IsSymmetric(leftNode.left, rightNode.right) && IsSymmetric(leftNode.right, rightNode.left);
                 }
@@ -40,5 +40,19 @@ public class TreeNode
         }
         return false;
 
+    }
+    
+    public int CalculateTotalSize(TreeNode? node)
+    {
+        if (node == null)
+        {
+            return 0;
+        }
+
+        int sum = 0;
+        sum += CalculateTotalSize(node.left);
+        sum += CalculateTotalSize(node.right);
+        
+        return sum;
     }
 }

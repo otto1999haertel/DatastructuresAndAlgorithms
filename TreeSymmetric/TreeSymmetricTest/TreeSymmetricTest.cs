@@ -206,5 +206,35 @@ public class TreeSymmetricTest
         var result = tree.IsSymmetric(tree.left, tree.right);
         Assert.That(result, Is.False); // ← dein Code gibt hier fälschlich TRUE zurück!
     }
+
+    [Test]
+    public void Asymmetric_MirrorSide_Missing_ReturnsFalse()
+    {
+        var tree = new TreeNode(1,
+            new TreeNode(2, null, new TreeNode(3)),
+            new TreeNode(2, null, new TreeNode(3))
+        );
+
+        var result = tree.IsSymmetric(tree.left, tree.right);
+        Assert.That(result, Is.False);
+    }
+    
+    [Test]
+    public void LargeSymmetricTree_StressTest_ReturnsTrue()
+    {
+        var tree = BuildSymmetricTree(14); // 16.383 Knoten
+        var sum = tree.CalculateTotalSize(tree);
+        var result = tree.IsSymmetric(tree.left, tree.right);
+        Assert.That(result, Is.True);
+    }
+
+    public TreeNode BuildSymmetricTree(int depth, int value = 1)
+    {
+        if (depth == 0) return null!;
+        return new TreeNode(value,
+            BuildSymmetricTree(depth - 1, value + 1),
+            BuildSymmetricTree(depth - 1, value + 1)
+        );
+    }
 }
 
