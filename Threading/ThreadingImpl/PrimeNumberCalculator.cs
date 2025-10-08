@@ -6,14 +6,22 @@ namespace ThreadingImpl;
 //Implement calculation token
 public class PrimeNumberCalculator
 {
-    private int _min = 0;
-    private int _max = 0;
-    private int _sections = 0;
+    private int _min;
+    private int _max;
+    private int _sections;
+    private List<int> _primes = new List<int>();
+    private readonly object _lockedObject = new object();
 
     public PrimeNumberCalculator(int Min, int Max, int Sections)
     {
         _min = Min;
         _max = Max;
         _sections = Sections;
+    }
+
+    public List<int> CalculatedPrimeNumbers()
+    {
+        
+        return _primes;
     }
 }
