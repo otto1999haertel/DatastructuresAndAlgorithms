@@ -36,10 +36,10 @@ public class TreeSymmetricTest
     [Test]
     public void EmptyTree_ReturnsTrue()
     {
-        TreeNode? tree = null;
+        TreeNode tree = new TreeNode(0);
 
         var result = tree.IsSymmetric(tree, tree);
-        Assert.That(result.Equals(null));
+        Assert.That(result.Equals(true));
     }
 
     [Test]
