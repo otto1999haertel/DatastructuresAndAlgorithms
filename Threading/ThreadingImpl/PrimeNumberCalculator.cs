@@ -50,6 +50,10 @@ public class PrimeNumberCalculator
        return Task.Run(() =>
              {
                  List<int> primeNumberResult = new List<int>();
+                 if (_sections == 1)
+                 {
+                     max += 1;
+                 }
                  for (int i = min; i < max; i++)
                  {
                      cancellationToken.ThrowIfCancellationRequested();
@@ -62,7 +66,7 @@ public class PrimeNumberCalculator
                              break;
                          }
                      }
-                     if (primNumber && i != 1)
+                     if (!primeNumberResult.Contains(i) && primNumber && i != 1)
                      {
                          primeNumberResult.Add(i);
                          Console.WriteLine($"Primzahl {i} gefunden in Bereich {min}-{max} auf Thread {Thread.CurrentThread.ManagedThreadId}");
