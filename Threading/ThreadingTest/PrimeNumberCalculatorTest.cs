@@ -1,4 +1,5 @@
 ﻿namespace ThreadingTest;
+using ThreadingImpl;
 
 public class Tests
 {
