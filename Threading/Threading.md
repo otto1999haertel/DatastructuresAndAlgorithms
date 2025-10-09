@@ -13,6 +13,10 @@
 - **Divide-and-Conquer-Algorithmen**: Aufgaben parallel auf mehrere Threads aufteilen.
 - **I/O-bound Operationen**: Asynchrone Verarbeitung von Datei-, Datenbank- oder Netzwerkzugriffen.
 
+### Concurrency vs Parallelism
+- **Concurrency** : Aufgaben werden effizient durch schnelle Context Wechsel abgearbeitet => Illusion der Parallelisierung (ausführbar auf einem CPU-Kern)=> Gut für warten z.B. I/O Operationen oder Web-Apps
+- **Parallelism** : Mehrere Aufgaben parallel ausgeführt durch mehrere CPU-Kerne => Gut für schwere Aufgaben Data (Dataanylsis, Grafics) z.B. Machine Learning
+
 ## 2. Threads und Ressourcen
 
 - **Thread-Lokaler Speicher**: Die CLR (Common Language Runtime) weist jedem Thread einen eigenen Speicher-Stack zu, um lokale Variablen getrennt zu halten. Jeder Thread hat eine eigene Kopie lokaler Variablen.
