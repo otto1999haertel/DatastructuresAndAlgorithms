@@ -45,7 +45,7 @@ Synchronisation ist notwendig, um bei mehreren Threads vorhersehbare Ergebnisse 
   - `Task.Wait`: Wartet, bis eine Aufgabe abgeschlossen ist.
 - **Locks**:
   - **Exklusive Locks**: Nur ein Thread darf den Code ausführen.
-    - `lock`: Leichtgewichtige Synchronisation innerhalb eines Prozesses. => kann mittels/ auf Objekten angewendet werden
+    - `lock`: Leichtgewichtige Synchronisation innerhalb eines Prozesses. => kann mittels/ auf Objekten angewendet werden => Bereich reserviert mittels Wait/WaitAsync
     - `Mutex`: Globale Synchronisation über mehrere Prozesse hinweg (ressourcenintensiv).
   - **Monitor**: Arbeitet auf Objektebene, ähnlich wie `lock`, bietet aber erweiterte Funktionen (z. B. Zeitlimits mit `Monitor.TryEnter`).
   - **Nicht-exklusive Locks**:
