@@ -58,4 +58,10 @@ public class TasksExampleRunningTest
         Console.WriteLine($"Gesamtdauer: {stopwatch.ElapsedMilliseconds} ms");
         Console.WriteLine($"Durchschnittliche Zeit pro URL: {avgTimePerUrl:F2} ms");
     }
+    [Test]
+    public void EasyTaskExec_Test()
+    {
+        var tasksExample = new TasksExample();
+        tasksExample.EasyTaskEntrance();
+    } 
 }
