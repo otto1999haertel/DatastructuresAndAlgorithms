@@ -73,6 +73,7 @@ Synchronisation ist notwendig, um bei mehreren Threads vorhersehbare Ergebnisse 
   - Können Werte zurückgeben (`Task<T>`).
   - Besonders nützlich für I/O-bound Operationen (z. B. Netzwerk- oder Dateizugriffe).
   - Können zu Listen hinzugefügt werden und anschließend mit Task.WhenAll() parallel abgearbeitet werden inkl. auf Warten der Ausführung
+  - Modernen/ Leichtgewichtiger als Threads => bevorzugte Nutzung
 - **Task.Factory und TaskCreationOptions**:
   - `Task.Factory` ermöglicht die Erstellung von Tasks mit spezifischen Optionen (z. B. `TaskCreationOptions.LongRunning` für langlaufende Aufgaben).
 - **Async/Await**:
