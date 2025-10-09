@@ -63,5 +63,12 @@ public class TasksExampleRunningTest
     {
         var tasksExample = new TasksExample();
         tasksExample.EasyTaskEntrance();
-    } 
+    }
+
+    [Test]
+    public void ParallelFor_Test()
+    {
+        var tasksExample = new TasksExample();
+        tasksExample.ParallelForTask();
+    }
 }

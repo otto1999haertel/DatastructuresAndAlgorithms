@@ -64,6 +64,25 @@ public class TasksExample
         task.Start();
         Console.WriteLine("Main Thread is done");
     }
+
+    public void ParallelForTask()
+    {
+        var results = new double[100]; // Array für geordnete Ergebnisse
+        object lockObject = new object();
+        Parallel.ForEach(Enumerable.Range(0, 100), i =>
+        {
+            double result = Math.Sqrt(i * 1000);
+            results[i] = result; // Speichere Ergebnis an der richtigen Position
+            Console.WriteLine($"Parallel Iteration {i} : {result}");
+
+        });
+
+        // Geordnete Ausgabe
+        for (int i = 0; i < results.Length; i++)
+        {
+            Console.WriteLine($"Iteration {i} : {results[i]}");
+        }
+        }
     
     private int AddNumbers(int a, int b)
     {
