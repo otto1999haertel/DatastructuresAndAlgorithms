@@ -13,6 +13,8 @@
 - **Divide-and-Conquer-Algorithmen**: Aufgaben parallel auf mehrere Threads aufteilen.
 - **I/O-bound Operationen**: Asynchrone Verarbeitung von Datei-, Datenbank- oder Netzwerkzugriffen.
 
+### Thread vs . Tasks
+
 ### Concurrency vs Parallelism
 - **Concurrency** : Aufgaben werden effizient durch schnelle Context Wechsel abgearbeitet => Illusion der Parallelisierung (ausführbar auf einem CPU-Kern)=> Gut für warten z.B. I/O Operationen oder Web-Apps
 - **Parallelism** : Mehrere Aufgaben parallel ausgeführt durch mehrere CPU-Kerne => Gut für schwere Aufgaben Data (Dataanylsis, Grafics) z.B. Machine Learning
