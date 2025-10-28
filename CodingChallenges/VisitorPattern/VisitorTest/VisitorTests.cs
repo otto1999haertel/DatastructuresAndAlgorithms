@@ -2,9 +2,9 @@
 
 public class VisitorTests
 {
-    private Adder _emptyAdder;
-    private Adder _simpleAdder;
-    private Adder _decimalAdder;
+    private IElement<double> _emptyAdder;
+    private IElement<double> _simpleAdder;
+    private IElement<double> _decimalAdder;
 
     private IVisitor<double> _sumVisitor;
     [SetUp]
