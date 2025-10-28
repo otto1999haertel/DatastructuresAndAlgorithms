@@ -1,6 +1,6 @@
 ﻿namespace VisitorTest;
 
-public class Tests
+public class VisitorTests
 {
     private Adder _emptyAdder;
     private Adder _simpleAdder;
